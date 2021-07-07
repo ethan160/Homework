@@ -1,4 +1,4 @@
-from flask import jsonify, render_template, url_for
+from flask import render_template
 from .import bp as app
 
 posts = [
@@ -44,12 +44,13 @@ def home():
     }
     return render_template('home.html', **context)
 
+# profile
 @app.route('/profile')
 def profile():
     logged_in_user = 'Ethan'
     return render_template('profile.html', u=logged_in_user)
 
-
+# contact
 @app.route('/contact')
 def contact():
     return "This is the contact page."

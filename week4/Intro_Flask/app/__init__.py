@@ -16,8 +16,8 @@ def create_app(config_class=Config):
     app.register_blueprint(shop)
 
     with app.app_context():
-        # building the reset of the flask application (configurations, additional packages, etc)
-        from .import routes # import from current 
+        # building the rest of the flask application (configurations, additional packages, etc)
+        from .import routes
 
     return app
 

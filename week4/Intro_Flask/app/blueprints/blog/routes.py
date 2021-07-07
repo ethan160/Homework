@@ -1,4 +1,5 @@
 from flask import render_template, url_for
+from app.blueprints.main.routes import posts
 from .import bp as app
 # from app.blueprints.blog.routes import posts
 
