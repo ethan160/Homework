@@ -40,12 +40,12 @@ posts = [
 ]
 
 
-@app.route('/')
-def home():
-    context = {
-        'posts': posts
-    }
-    return render_template('home.html', **context)
+# @app.route('/')
+# def home():
+#     context = {
+#         'posts': posts
+#     }
+#     return render_template('home.html', **context)
 
 
 @app.route('/blog/<int:id>')
