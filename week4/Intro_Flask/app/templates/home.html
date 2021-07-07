@@ -1,0 +1,97 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+<h3>Profile | Welcome {{ u }} </h3>
+<hr />
+<!-- <div class="row">
+
+    <div class="col-md-4">
+        <img class="img-fluid" src="https://via.placeholder.com/1000x1500" alt="profile">
+    </div>
+    <div class="col-md">
+        <form action=" ">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="First Name" />
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Last Name" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <input type="email" class="form-control" placeholder="example@email.com" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <div class="form-group">
+                            <input type="file" class="form-control-file" name="" id="" placeholder="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <div class="form-group">
+                            <textarea class="form-control-file" name=" " id=" " cols="30" rows="10"
+                                placeholder="Type bio here"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <input type="submit" class="fbtn btn-info btn-block" value="Update Profile" />
+                </div>
+            </div>
+        </form>
+    </div>
+</div> -->
+
+
+<form action="" method="POST" s>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-10">
+                <input name="body_text" class="form-control" type="text" placeholder="Your blog post here..." />
+            </div>
+            <div class="col-md-2">
+                <input class="btn btn-info btn-block" type="submit" value="Post" />
+            </div>
+        </div>
+    </div>
+</form>
+
+<hr />
+
+<ul class="list-group">
+    {% for p in posts %}
+    <li class="list-group-item">
+        <!-- <p>{{ p['body'] }}</p> -->
+        <a href="{{ url_for('blog.get_post', id=p.id) }}">{{ p['body'] }}</a>
+        <div>
+            <span>
+                <cite>&mdash; {{ p.author }}</cite>
+                <small class="float-right">{{ p.timestamp }}</small>
+            </span>
+            ​
+        </div>
+    </li>
+    <!-- {{  p['items']['health'] }}
+    {{ p['items']['mana'] }} -->
+
+    {% endfor %}
+</ul>
+
+
+
+{% endblock content %}
