@@ -1,0 +1,47 @@
+[
+    {
+        "name": "United States",
+        "attendees": [
+            {
+                "name": "Rebecca Standford",
+                "availabilityDates": [
+                    "1",
+                    "2",
+                    "3"
+                ]
+            },
+            {
+                "name": "Courtney Charese",
+                "availabilityDates": [
+                    "2",
+                    "7",
+                    "9"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Ukraine",
+        "attendees": [
+            {
+                "name": "nah z",
+                "availabilityDates": [
+                    "3",
+                    "5",
+                    "7"
+                ]
+            },
+            {
+                "name": "ya c",
+                "availabilityDates": [
+                    "2",
+                    "4",
+                    "5"
+                ]
+            }
+        ]
+    }
+]
+
+
+
